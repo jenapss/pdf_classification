@@ -54,10 +54,15 @@ To deploy this app locally, follow these steps:
 
 1) Download the model file "model.safetensors" (807 MB) from the Google Drive folder. You can download it manually or with CLI command shown below
 2) Place the downloaded file into the "OCRmodel" folder of the repository.
-3) Build the Docker container.
-
 ```
 FILEID="1-5utW7IaP--o-b2Yyrv4TqMfcTOl3tvV"
 FILENAME="model.safetensors"
+# run below command under OCRmodel dir
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=${FILEID}' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=${FILEID}" -O ${FILENAME} && rm -rf /tmp/cookies.txt
 ```
+3) clone this repo ```git clone https://github.com/jenapss/pdf_classification``` and ```cd``` into cloned repo
+4) Build the Docker container.
+ <br>  a) ```docker build -t <image_name>:<tag> .```
+ <br>  b) ```docker run -p <host-port>:<container-port> <image_name>:<tag>```
+   
+

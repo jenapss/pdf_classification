@@ -2,7 +2,7 @@
 
 def classify_docs(image,processor, model):
     # prepare image for the model
-    encoded_inputs = processor(image, return_tensors="pt")
+    encoded_inputs = processor(image, return_tensors="pt",truncation=True)
 
     # make sure all keys of encoded_inputs are on the same device as the model
     for k,v in encoded_inputs.items():

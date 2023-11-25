@@ -64,5 +64,8 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
 4) Build the Docker container.
  <br>  a) ```docker build -t <image_name>:<tag> .```
  <br>  b) ```docker run -p <host-port>:<container-port> <image_name>:<tag>```
-   
+
+## Some Recommendations & Ideas
+Some PDFs contain too many pages that are not that much needed to make classification. By some additional preprocessing step, before sending POST requests with PDFs, we could keep only up to 3 pages of PDFs. This way we can increase inference time because it directly affects upload/download time.
+
 

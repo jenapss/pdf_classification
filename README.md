@@ -25,9 +25,9 @@ Predictive Accuracy: By leveraging the LayoutLM v2 model, the API ensures high a
 2) Document Classification
 <br>Endpoint: ```/upload_pdf```
 <br>Method: ```POST```
-<br>Description: Accepts PDF or TIFF files for classification. The API predicts the document category and returns the result.
+<br>Description: Accepts PDF files for classification. The API predicts the document category and returns the result.
 <br>Request Parameters:
-file (multipart file): The input PDF or TIFF file. 
+file (multipart file): The input PDF file. 
 <br> Response Example: ```{"filename": "document.pdf", "predicted_label": "Financial Report"}```
 
 ## Source Code

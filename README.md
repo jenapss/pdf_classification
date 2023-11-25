@@ -36,6 +36,18 @@ file (multipart file): The input PDF or TIFF file.
 <br>Custom Trained LayoutLMv2 OCR Model:
 https://drive.google.com/drive/folders/17oVK2tqNd1byc0kJx4FFw4nxEJnBFal_?usp=share_link
 
+## AWS EC2 container endpoint
+[http://34.238.193.99:80/upload_pdf](http://34.238.193.99:80/upload_pdf)
+<br>[http://34.238.193.99:80/health](http://34.238.193.99:80/health)
+
+Try this command
+```
+curl -X POST -F "file=@<path_to_your_pdf_file>" http://34.238.193.99:80/upload_pdf
+```
+Health check
+```
+curl -X GET http://34.238.193.99:80/health
+```
 ## Setup Instructions for Local deployment
 
 To deploy this app locally, follow these steps:

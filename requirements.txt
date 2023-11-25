@@ -1,0 +1,8 @@
+fastapi==0.104.1
+pdf2image==1.16.3
+Pillow==10.1.0
+pytesseract==0.3.10
+streamlit==1.28.1
+transformers==4.35.2
+detectron2 @ git+https://github.com/facebookresearch/detectron2.git@017abbfa5f2c2a2afa045200c2af9ccf2fc6227f
+PyMuPDF

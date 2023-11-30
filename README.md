@@ -37,7 +37,7 @@ file (multipart file): The input PDF file.
 https://drive.google.com/drive/folders/17oVK2tqNd1byc0kJx4FFw4nxEJnBFal_?usp=share_link
 
 
-```
+
 ## Setup Instructions for Local deployment
 
 To deploy this app locally, follow these steps:
@@ -62,6 +62,7 @@ curl -X POST -F "file=@<path_to_your_pdf_file>" http://URL-ENDPOINT:PORT/upload_
 Health check
 ```
 curl -X GET http://URL-ENDPOINT:PORT/health
+```
 ## Some Recommendations & Ideas
 Some PDFs contain too many pages that are not that much needed to make classification. By some additional preprocessing step, before sending POST requests with PDFs, we could keep only up to 3 pages of PDFs. This way we can increase inference time because it directly affects upload/download time.
 

@@ -7,7 +7,7 @@ It all started with the realization that document classification, especially wit
 
 I spend most of my time preparing dataset & experimenting with different models. I gathered a dataset of 27 diverse PDFs that were shared with me. The decision to go deep with LayoutLM v2 was a good decision. The model achieved an impressive accuracy rate of 96%, proving its ability in handling the nuances of messy PDFs.
 ## Dockerization & Deployment
-
+(My AWS ACCCOUNT GOT SUSPENDED AND CURRENTLY WORKING ON GETTING IT BACK)
 The next logical step was to deploy the trained model into a user-friendly API. It encapsulates all the nitty-gritty details, making life easier for developers. 
 But why stop there? I decided to take it a step further and deploy the API on AWS EC2 instances. This cloud-based setup not only provided scalability but also ensured a robust and reliable deployment. It was a move that would make the Document Classification API even more accessible and dependable.
 
@@ -36,17 +36,7 @@ file (multipart file): The input PDF file.
 <br>Custom Trained LayoutLMv2 OCR Model:
 https://drive.google.com/drive/folders/17oVK2tqNd1byc0kJx4FFw4nxEJnBFal_?usp=share_link
 
-## AWS EC2 container endpoint
-[http://16.170.218.27:80/upload_pdf](http://16.170.218.27:80/upload_pdf)
-<br>[http://16.170.218.27:80/health](http://16.170.218.27:80/health)
 
-Try this command
-```
-curl -X POST -F "file=@<path_to_your_pdf_file>" http://16.170.218.27:80/upload_pdf
-```
-Health check
-```
-curl -X GET http://16.170.218.27:80/health
 ```
 ## Setup Instructions for Local deployment
 
@@ -65,6 +55,13 @@ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download
  <br>  a) ```docker build -t <image_name>:<tag> .```
  <br>  b) ```docker run -p <host-port>:<container-port> <image_name>:<tag>```
 
+Try this command
+```
+curl -X POST -F "file=@<path_to_your_pdf_file>" http://URL-ENDPOINT:PORT/upload_pdf
+```
+Health check
+```
+curl -X GET http://URL-ENDPOINT:PORT/health
 ## Some Recommendations & Ideas
 Some PDFs contain too many pages that are not that much needed to make classification. By some additional preprocessing step, before sending POST requests with PDFs, we could keep only up to 3 pages of PDFs. This way we can increase inference time because it directly affects upload/download time.
 

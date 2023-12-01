@@ -10,7 +10,7 @@ I spend most of my time preparing dataset & experimenting with different models.
 RESOLVED --> (My AWS ACCCOUNT GOT SUSPENDED AND CURRENTLY WORKING ON GETTING IT BACK) 
 The next logical step was to deploy the trained model into a user-friendly API. It encapsulates all the nitty-gritty details, making life easier for developers. 
 But why stop there? I decided to take it a step further and deploy the API on AWS EC2 instances. This cloud-based setup not only provided scalability but also ensured a robust and reliable deployment. It was a move that would make the Document Classification API even more accessible and dependable.
-Try this command
+<br>Try this command
 ```
 curl -X POST -F "file=@<path_to_your_pdf_file>" http://16.171.175.90:80/upload_pdf
 ```

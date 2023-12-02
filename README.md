@@ -12,11 +12,11 @@ The next logical step was to deploy the trained model into a user-friendly API. 
 But why stop there? I decided to take it a step further and deploy the API on AWS EC2 instances. This cloud-based setup not only provided scalability but also ensured a robust and reliable deployment. It was a move that would make the Document Classification API even more accessible and dependable.
 <br>Try this command
 ```
-curl -X POST -F "file=@<path_to_your_pdf_file>" http://16.171.175.90:80/upload_pdf
+curl -X POST -F "file=@<path_to_your_pdf_file>" http://128.199.0.227:80/upload_pdf
 ```
 Health check
 ```
-curl -X GET http://16.171.175.90:80/health
+curl -X GET http://128.199.0.227:80/health
 ```
 ## Key Feature
 
